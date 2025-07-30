@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  --color-purple-100: hsl(254, 88%, 90%);
+  --color-purple-500: hsl(256, 67%, 59%);
+
+  --color-yellow-100: hsl(31, 66%, 93%);
+  --color-yellow-500: hsl(39, 100%, 71%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 7%);
+
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --font-small: 1.125rem;
+  --font-medium: 1.5rem;
+  --font-large: 1.75rem;
+  --font-larger: 2.5rem;
+  --font-xl: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: rgb(244, 244, 244);
+}
+
+.radius {
+  border-radius: 10px;
+}
+
+.font-sm {
+  font-size: var(--font-small);
+}
+
+.font-md {
+  font-size: var(--font-medium);
+}
+
+.font-lg {
+  font-size: var(--font-large);
+}
+
+.font-larger {
+  font-size: var(--font-larger);
+}
+
+.font-xl {
+  font-size: var(--font-xl);
+}
+
+.bg-purple-light {
+  background-color: var(--color-purple-100);
+}
+
+.bg-purple {
+  background-color: var(--color-purple-500);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow-500);
+}
+
+.bg-yellow-light {
+  background-color: var(--color-yellow-100);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-yellow {
+  color: var(--color-yellow-500);
+}
+
+.text-purple {
+  color: var(--color-purple-500);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-bolder {
+  font-weight: 600;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-050 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-125 {
+  gap: 1.25rem;
+}
+
+.gap-250 {
+  gap: 2.5rem;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  padding: 0.725rem;
+
+  @media (min-width: 1440px) {
+    padding: 2rem;
+    max-width: 1440px;
+    grid-template-areas:
+      'quicker   mainPurple     mainPurple        scheduleLight'
+      'quicker   mainPurple     mainPurple        scheduleLight'
+      'quicker   mainPurple     mainPurple        scheduleLight'
+      'quicker   mainPurple     mainPurple        scheduleLight'
+      'quicker   whiteAccounts  postingSchedule   scheduleLight'
+      'quicker   whiteAccounts  postingSchedule   scheduleLight'
+      'aiContent whiteAccounts  postingSchedule   scheduleLight'
+      'aiContent whiteAccounts  postingSchedule   scheduleLight'
+      'aiContent audienceGrowth growFollowers     growFollowers'
+      'aiContent audienceGrowth growFollowers     growFollowers'
+      'aiContent audienceGrowth growFollowers     growFollowers'
+      'aiContent audienceGrowth growFollowers     growFollowers'
+  }
+}
+
+.box {
+  max-width: 375px;
+
+  @media (min-width: 1440px) {
+    max-width: unset;
+  }
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-125 {
+  padding: 1.25rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+/* with stars */
+.box_main_purple {
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .stars_img {
+    width: 175px;
+  }
+}
+
+/* Manage multiple accounts */
+.box_accounts_white {
+  overflow-y: hidden;
+
+  .platforms_img {
+    width: 100%;
+  }
+}
+
+/* Maintain a consistent posting schedule */
+.box_posting_yellow {
+
+  .calendar_img {
+    width: 230px;
+  }
+}
+
+/* Schedule to social media */
+.box_schedule_light {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .paragraph {
+    max-width: 90%;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+/* Grow followers */
+.box_followers_purple {
+  h3 {
+    max-width: 70%;
+    font-weight: 500;
+  }
+
+  .followers_img {
+    width: 70%;
+  }
+}
+
+/* White, audience, people */
+.box_audience_white {
+
+  .audience_img {
+    width: 180px;
+  }
+}
+
+.box_content_light {
+
+  .post_img {
+    width: 190px;
+  }
+}
+
+.box_content_yellow {
+
+  .content_img {
+    width: 200px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .box_main_purple {
+    grid-area: mainPurple;
+  }
+
+  /* Manage multiple accounts */
+  .box_accounts_white {
+    grid-area: whiteAccounts;
+
+  }
+
+  /* Maintain a consistent posting schedule */
+  .box_posting_yellow {
+    grid-area: postingSchedule;
+
+
+  }
+
+  /* Schedule to social media */
+  .box_schedule_light {
+    grid-area: scheduleLight;
+
+  }
+
+  /* Grow followers */
+  .box_followers_purple {
+    grid-area: growFollowers;
+    flex-direction: row;
+
+    .followers_img {
+      width: 30%;
+    }
+  }
+
+  /* White, audience, people */
+  .box_audience_white {
+    grid-area: audienceGrowth;
+  }
+
+  .box_content_light {
+    grid-area: quicker;
+  }
+
+  .box_content_yellow {
+    grid-area: aiContent;
+
+    .content_img {
+      width: 200px;
+    }
+  }
+}
