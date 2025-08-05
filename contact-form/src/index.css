@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: italic;
+}
+
+:root {
+  --color-green-200: hsl(148, 38%, 91%);
+  --color-green-600: hsl(169, 82%, 27%);
+  --color-red: hsl(0, 66%, 54%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-500: hsl(186, 15%, 59%);
+  --color-grey-900: hsl(187, 24%, 22%);
+
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --font-14: 0.875rem;
+  --font-16: 1rem;
+  --font-18: 1.125rem;
+  --font-24: 1.5rem;
+  --font-28: 1.75rem;
+  --font-29: 1.8125rem;
+  --font-32: 2rem;
+  --font-40: 2.5rem;
+  --font-48: 3rem;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.app_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-green-200);
+  padding: 1rem;
+}
